@@ -12,6 +12,7 @@ import android.widget.RemoteViews;
  */
 public class ANameWidget extends AppWidgetProvider {
 
+
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         // There may be multiple widgets active, so update all of them
@@ -19,6 +20,8 @@ public class ANameWidget extends AppWidgetProvider {
         for (int i = 0; i < N; i++) {
             updateAppWidget(context, appWidgetManager, appWidgetIds[i]);
         }
+
+
     }
 
     @Override
@@ -51,5 +54,12 @@ public class ANameWidget extends AppWidgetProvider {
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
+
+
+
+
 }
+
+
+
 

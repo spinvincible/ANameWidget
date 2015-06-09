@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:layout_marginTop="15dp"
-        android:hint="Enter Your Name Here"/>
+        android:hint="Write to your Home Screen"/>
 
     <Button
         android:id="@+id/add_button"

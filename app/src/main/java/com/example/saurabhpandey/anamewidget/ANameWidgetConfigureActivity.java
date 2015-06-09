@@ -5,9 +5,12 @@ import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 /**
@@ -97,5 +100,8 @@ public class ANameWidgetConfigureActivity extends Activity {
         prefs.remove(PREF_PREFIX_KEY + appWidgetId);
         prefs.commit();
     }
+
+
+
 }
 

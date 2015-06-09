@@ -12,7 +12,7 @@
         android:layout_margin="8dp"
         android:text="Enter Your Name"
         android:textColor="#ffffff"
-        android:textSize="30sp"
+        android:textSize="18sp"
         android:textStyle="italic" />
 
 </RelativeLayout>

@@ -10,7 +10,8 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_margin="8dp"
-        android:text="Enter Your Name"
+        android:text="@string/name_widget"
+android:clickable="true"
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="italic" />

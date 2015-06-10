@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="Configure Your Widget"
+        android:text="@string/widget_configure"
         android:textSize="20sp"/>
 
     <EditText
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:layout_marginTop="15dp"
-        android:hint="Write to your Home Screen"/>
+        android:hint="@string/write_here"/>
 
     <Button
         android:id="@+id/add_button"
@@ -28,6 +28,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         style="@style/btnStyleShakespeare"
-        android:text="Set Name To Home Screen" />
+        android:text="@string/text_widget" />
 
 </LinearLayout>

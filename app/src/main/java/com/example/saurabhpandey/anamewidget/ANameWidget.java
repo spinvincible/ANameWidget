@@ -66,7 +66,7 @@ public class ANameWidget extends AppWidgetProvider {
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
 
-
+        Toast.makeText( context, "I will miss you" , Toast.LENGTH_LONG).show();
         // When the user deletes the widget, delete the preference associated with it.
 //        final int N = appWidgetIds.length;
 //        for (int i = 0; i < N; i++) {
@@ -76,6 +76,7 @@ public class ANameWidget extends AppWidgetProvider {
 
     @Override
     public void onEnabled(Context context) {
+        Toast.makeText( context, "Thanks for choosing A Name Widget" , Toast.LENGTH_LONG).show();
         // Enter relevant functionality for when the first widget is created
     }
 

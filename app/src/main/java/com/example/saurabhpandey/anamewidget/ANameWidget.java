@@ -6,6 +6,7 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
+import android.widget.TextView;
 
 
 /**
@@ -13,6 +14,8 @@ import android.widget.RemoteViews;
  * App Widget Configuration implemented in {@link ANameWidgetConfigureActivity ANameWidgetConfigureActivity}
  */
 public class ANameWidget extends AppWidgetProvider {
+
+
 //    public static String WIDGET_BUTTON = "com.example.saurabhpandey.anamewidget.WIDGET_BUTTON";
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
@@ -40,17 +43,19 @@ public class ANameWidget extends AppWidgetProvider {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager,
-                         int[] appWidgetIds) {
+                         int[] appWidgetIds)
+    {
         for (int i = 0; i < appWidgetIds.length; i++) {
             int appWidgetId = appWidgetIds[i];
             // Create an Intent to launch ExampleActivity
-            Intent intent = new Intent(context, ANameWidgetConfigureActivity.class);
-            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+//            Intent intent = new Intent(context, ANameWidgetConfigureActivity.class);
+//            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 
             // Get the layout for the App Widget and attach an on-click listener
             // to the button
-            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.aname_widget_configure);
-            views.setOnClickPendingIntent(R.id.appwidget_text, pendingIntent);
+            CharSequence widgetText = ANameWidgetConfigureActivity.loadTitlePref(context, appWidgetId);
+            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.aname_widget);
+            views.setTextViewText(R.id.appwidget_text, widgetText);
 
             // Tell the AppWidgetManager to perform an update on the current app widget
             appWidgetManager.updateAppWidget(appWidgetId, views);
@@ -60,10 +65,10 @@ public class ANameWidget extends AppWidgetProvider {
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
         // When the user deletes the widget, delete the preference associated with it.
-        final int N = appWidgetIds.length;
-        for (int i = 0; i < N; i++) {
-            ANameWidgetConfigureActivity.deleteTitlePref(context, appWidgetIds[i]);
-        }
+//        final int N = appWidgetIds.length;
+//        for (int i = 0; i < N; i++) {
+//            ANameWidgetConfigureActivity.deleteTitlePref(context, appWidgetIds[i]);
+//        }
     }
 
     @Override

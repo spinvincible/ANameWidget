@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -64,6 +65,8 @@ public class ANameWidget extends AppWidgetProvider {
 
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
+
+
         // When the user deletes the widget, delete the preference associated with it.
 //        final int N = appWidgetIds.length;
 //        for (int i = 0; i < N; i++) {

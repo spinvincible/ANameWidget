@@ -1,6 +1,7 @@
 package com.example.saurabhpandey.anamewidget;
 
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RemoteViews;
 import android.widget.Toast;
 
 
@@ -27,6 +29,12 @@ public class ANameWidgetConfigureActivity extends Activity {
             // When the button is clicked, store the string locally
             String widgetText = mAppWidgetText.getText().toString();
             saveTitlePref(context, mAppWidgetId, widgetText);
+            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.aname_widget);
+            views.setTextViewText(R.id.appwidget_text, widgetText);
+            Intent intent = new Intent(context , ANameWidgetConfigureActivity.class);
+            PendingIntent pendingIntent = PendingIntent.getActivity(context , 0 , intent , 0);
+            views.setOnClickPendingIntent(R.id.appwidget_text , pendingIntent);
+
 
             // It is the responsibility of the configuration activity to update the app widget
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);

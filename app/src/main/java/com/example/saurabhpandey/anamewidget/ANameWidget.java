@@ -13,6 +13,30 @@ import android.widget.RemoteViews;
  * App Widget Configuration implemented in {@link ANameWidgetConfigureActivity ANameWidgetConfigureActivity}
  */
 public class ANameWidget extends AppWidgetProvider {
+//    public static String WIDGET_BUTTON = "com.example.saurabhpandey.anamewidget.WIDGET_BUTTON";
+    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
+                                int appWidgetId) {
+
+        CharSequence widgetText = ANameWidgetConfigureActivity.loadTitlePref(context, appWidgetId);
+        // Construct the RemoteViews object
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.aname_widget);
+        views.setTextViewText(R.id.appwidget_text, widgetText);
+//        Intent intent = new Intent(WIDGET_BUTTON);
+//        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+//        views.setOnClickPendingIntent(R.id.appwidget_text, pendingIntent);
+
+        // Instruct the widget manager to update the widget
+        appWidgetManager.updateAppWidget(appWidgetId, views);
+    }
+
+//    @Override
+//    public void onReceive(Context context, Intent intent) {
+//        super.onReceive(context, intent);
+//        if (WIDGET_BUTTON.equals(intent.getAction())) {
+//
+//
+//        }
+//    }
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager,
@@ -32,6 +56,7 @@ public class ANameWidget extends AppWidgetProvider {
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }
     }
+
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
         // When the user deletes the widget, delete the preference associated with it.
@@ -50,21 +75,6 @@ public class ANameWidget extends AppWidgetProvider {
     public void onDisabled(Context context) {
         // Enter relevant functionality for when the last widget is disabled
     }
-
-    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
-                                int appWidgetId) {
-
-        CharSequence widgetText = ANameWidgetConfigureActivity.loadTitlePref(context, appWidgetId);
-        // Construct the RemoteViews object
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.aname_widget);
-        views.setTextViewText(R.id.appwidget_text, widgetText);
-
-
-        // Instruct the widget manager to update the widget
-        appWidgetManager.updateAppWidget(appWidgetId, views);
-    }
-
-
 
 
 }

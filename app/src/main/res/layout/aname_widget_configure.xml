@@ -1,49 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/textConfigure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:id="@+id/textConfigure"
         android:gravity="center"
         android:text="@string/widget_configure"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/appwidget_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
         android:layout_below="@+id/textConfigure"
         android:layout_marginTop="15dp"
-        android:hint="@string/write_here"/>
+        android:hint="@string/write_here"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/add_button"
+        style="@style/btnStyleShakespeare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        style="@style/btnStyleShakespeare"
-        android:text="@string/text_widget"
         android:layout_below="@+id/appwidget_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/text_widget" />
 
     <ImageButton
+        android:id="@+id/shareWhatsapp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/whatsapp"
-        android:id="@+id/shareWhatsapp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="285dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="285dp"
+        android:onClick="whatsappShare"
+        android:padding="5dp"
+        android:src="@drawable/whatsapp" />
 
 
 </RelativeLayout>

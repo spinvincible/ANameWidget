@@ -3,6 +3,7 @@ package com.example.saurabhpandey.anamewidget;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -98,9 +99,6 @@ public class ANameWidgetConfigureActivity extends Activity {
         prefs.remove(PREF_PREFIX_KEY + appWidgetId);
         prefs.commit();
     }
-
-
-
 
 }
 

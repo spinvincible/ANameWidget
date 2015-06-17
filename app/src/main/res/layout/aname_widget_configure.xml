@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:id="@+id/textConfigure"
         android:gravity="center"
         android:text="@string/widget_configure"
         android:textSize="20sp"/>
@@ -19,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
+        android:layout_below="@+id/textConfigure"
         android:layout_marginTop="15dp"
         android:hint="@string/write_here"/>
 
@@ -26,8 +28,22 @@
         android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:gravity="center"
         style="@style/btnStyleShakespeare"
-        android:text="@string/text_widget" />
+        android:text="@string/text_widget"
+        android:layout_below="@+id/appwidget_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
 
-</LinearLayout>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/whatsapp"
+        android:id="@+id/shareWhatsapp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="285dp" />
+
+
+</RelativeLayout>

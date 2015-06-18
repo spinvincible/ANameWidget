@@ -9,10 +9,12 @@
         android:clickable="true"
         android:text="@string/name_widget"
         android:textColor="#ffffff"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="italic"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+
 
 
 </RelativeLayout>

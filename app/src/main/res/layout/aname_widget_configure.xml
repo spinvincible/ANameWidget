@@ -34,14 +34,6 @@
         android:gravity="center"
         android:text="@string/text_widget" />
 
-    <yuku.ambilwarna.widget.AmbilWarnaPreference
-        android:key="your_preference_key"
-        android:defaultValue="0xff6699cc"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/add_button"
-        android:title="Pick a color"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 
     <ImageButton

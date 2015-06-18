@@ -44,18 +44,7 @@ public class ANameWidgetConfigureActivity extends Activity {
         }
     };
 
-//    AmbilWarnaDialog dialog = new AmbilWarnaDialog(this, initialColor, new OnAmbilWarnaListener() {
-//        @Override
-//        public void onOk(AmbilWarnaDialog dialog, int color) {
-//            // color is the color selected by the user.
-//        }
-//
-//        @Override
-//        public void onCancel(AmbilWarnaDialog dialog) {
-//            // cancel was selected by the user
-//        }
-//
-//        dialog.show();
+
 
     public ANameWidgetConfigureActivity() {
         super();
